@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Bulb</title>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10%;
+        }
+
+        .btn {
+            margin-top: 1%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: greenyellow;
+            color: orange;
+            border: none;
+            box-shadow: 4px 3px 2px 1px rgb(10, 255, 10);
+        }
+        .btn:hover {
+            background-color: rgb(93, 142, 21);
+            color: orangered;
+            box-shadow: -3px 4px 2px 1px rgb(27, 247, 27);
+        }
+        hr {
+            background-color: rgb(34, 31, 31);
+        }
+    </style>
+</head>
+<body>
+    <img id="bulb" class="center" src="Imgs/Bulb-off.jpg" alt="">
+    <button id="toggleBtn" class="center btn">Turn On</button>
+    <hr size=400px>
+    
+
+
+    <script>
+        let btn = document.getElementById("toggleBtn")
+        let bulb = document.getElementById("bulb")
+        btn.addEventListener("click" , toggleBulb)
+
+        function toggleBulb (e){
+            if(btn.textContent.includes("On")){
+                bulb.src = "Imgs/Bulb-on.jpg"
+                btn.textContent = "Turn Off"
+            }
+            else {
+                bulb.src = "Imgs/Bulb-off.jpg"
+                btn.textContent = "Turn On"
+            }
+        }
+    </script>
+</body>
+</html>
